@@ -14,7 +14,7 @@ public class MyListTest {
 	@Before
 	public void init() {
 		
-	}
+	}//
 	
 	@Test
 	public void testAdd() {
