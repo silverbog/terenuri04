@@ -54,6 +54,7 @@
 		document.getElementById("nrCaut").value = "";
 		document.getElementById("tarlaCaut").value = "";
 		document.getElementById("parcelaCaut").value = "";
+		document.getElementById("inrgCaut").value = "";
 	}
 </script>
 	</head>
@@ -69,13 +70,14 @@
 
 			<tr>
 				<!-- Linia care afisaza etichete. 
-				Ia valorile din fisierul ApplicationResources.properties care trbuie plasat in package root -->
+				Ia valorile din fisierul ApplicationResources.properties care trebuie plasat in package root -->
 				<td><s:text name="label.nrcad" /></td>
 				<td><s:text name="label.nume" /></td>
 				<td><s:text name="label.strada" /></td>
 				<td><s:text name="label.numar" /></td>
 				<td><s:text name="label.tarla" /></td>
 				<td><s:text name="label.parcela" /></td>
+				<td><s:text name="label.inrg" /></td>
 			</tr>
 			<tr>
 				<!-- Aceasta parte afisaza input de tip text care prin Bean Form se transmit la Action -->
@@ -84,8 +86,8 @@
 				<td><input type="text" name="caut.str" id="strCaut" value="${caut.str}" /></td>
 				<td><input type="text" name="caut.nr" id="nrCaut" value="${caut.nr}" /></td>
 				<td><input type="text" name="caut.tarla" id="tarlaCaut" value="${caut.tarla}" /></td>
-				<td><input type="text" name="caut.parcela" id="parcelaCaut"
-					value="${caut.parcela}" /></td>
+				<td><input type="text" name="caut.parcela" id="parcelaCaut" value="${caut.parcela}" /></td>
+				<td><input type="text" name="caut.inrg" id="inrgCaut" value="${caut.inrg}" /></td>
 			</tr>
 
 
@@ -116,7 +118,7 @@
 	<s:set var="titleTarla" value="%{getText('label.tarla')}" />
 	<s:set var="titleParcela" value="%{getText('label.parcela')}" />
 	<s:set var="titleData" value="%{getText('label.data')}" />
-	<s:set var="titleInreg" value="%{getText('label.inreg')}" />
+	<s:set var="titleInrg" value="%{getText('label.inrg')}" />
 	<s:set var="titleObiect" value="%{getText('label.obiect')}" />
 	<s:set var="titleCf" value="%{getText('label.cf')}" />
 	<s:set var="titleDomeniu" value="%{getText('label.domeniu')}" />
@@ -138,24 +140,34 @@
 
 		<display:column property="nrcadast" title="${titleNrCad}"
 			sortable="true" headerClass="sortable" />
+			
 		<display:column property="nume" title="${titleNume}" sortable="true"
 			headerClass="sortable" />
+		
 		<display:column property="str" title="${titleStrada}" sortable="true"
 			headerClass="sortable" />
+		
 		<display:column property="nr" title="${titleNumar}" sortable="true"
 			headerClass="sortable" />
+		
 		<display:column property="tarla" title="${titleTarla}" sortable="true"
 			headerClass="sortable" />
+		
 		<display:column property="parcela" title="${titleParcela}"
 			sortable="true" headerClass="sortable" />
+		
 		<display:column property="data" title="${titleData}" sortable="true"
 			headerClass="sortable"  />
-		<display:column property="inrg" title="${titleInreg}" sortable="true"
+		
+		<display:column property="inrg" title="${titleInrg}" sortable="true"
 			headerClass="sortable" />
+		
 		<display:column property="obiect" title="${titleObiect}"
 			sortable="true" headerClass="sortable" />
+		
 		<display:column property="cf" title="${titleCf}" sortable="true"
 			headerClass="sortable" />
+		
 		<display:column property="dom_public" title="${titleDomeniu}"
 			sortable="true" headerClass="sortable" />
 
