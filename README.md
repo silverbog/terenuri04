@@ -23,6 +23,11 @@ Am sa pastrez si datele din Access in Github!
 Deci la treaba:
 - export msaccess table CRAIOVA
 - sterg tabela in  mysql
+### problema datelor care sunt pe doua servere diferite
+Primul modul, de terenuri isi are datele pe un server mySql in schema terenuri_dev, am creeat user pentru dev
+Al doilea modul, Imobile isi are datele pe un server MS-SQL
+Trebuie ca prezenta aplicatie sa gestioneze aceasta arhitectura
+
 ### Code
 use terenuri_dev;
 truncate table craiova;
